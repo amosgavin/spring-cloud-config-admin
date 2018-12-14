@@ -40,4 +40,10 @@ public class SccaGitProperties {
     @Value("${spring.cloud.config.server.git.search-paths:}")
     private String searchPaths;
 
+    /**
+     * 本地Git配置仓库下的路径
+     */
+    @Value("${spring.cloud.config.server.git.local-repositories:}")
+    private String localRepositories;
+
 }

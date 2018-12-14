@@ -26,6 +26,11 @@ public class ProjectDto {
     private String name;
 
     /**
+     * 配置文件路径，相对根目录
+     */
+    private String confPath;
+
+    /**
      * 部署的环境列表
      */
     private List<EnvDto> envs = new ArrayList<>();

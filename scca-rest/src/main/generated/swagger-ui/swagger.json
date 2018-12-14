@@ -1367,6 +1367,9 @@
           "items" : {
             "$ref" : "#/definitions/Label"
           }
+        },
+        "confPath" : {
+          "type" : "string"
         }
       }
     },
@@ -1391,6 +1394,9 @@
           "items" : {
             "$ref" : "#/definitions/LabelDto"
           }
+        },
+        "confPath" : {
+          "type" : "string"
         }
       }
     },

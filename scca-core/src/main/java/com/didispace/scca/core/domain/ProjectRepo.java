@@ -15,7 +15,7 @@ public interface ProjectRepo extends JpaRepository<Project, Long> {
 
     Project findByName(String name);
 
-    @Query("select new Project(p.id, p.name) from Project p order by p.id asc")
+    @Query("select new Project(p.id, p.name, p.confPath) from Project p order by p.id asc")
     List<Project> simpleFindAll();
 
 }

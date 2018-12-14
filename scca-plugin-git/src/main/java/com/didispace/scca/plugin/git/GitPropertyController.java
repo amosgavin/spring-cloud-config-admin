@@ -197,11 +197,11 @@ public class GitPropertyController {
 
             // projectUrl append username & password， git clone projectUrl
             String regex = this.getUrlRegex(this.projectUrl);
-            this.projectUrl = this.projectUrl.replaceFirst(regex, regex + gitProperties.getUsername() + ":" + gitProperties.getPassword() + "@");
+//            this.projectUrl = this.projectUrl.replaceFirst(regex, regex + gitProperties.getUsername() + ":" + gitProperties.getPassword() + "@");
             log.info("project url : " + this.projectUrl);
 
             // 生成本地拉取配置用来修改使用的唯一目录名
-            this.dir = UUID.randomUUID().toString();
+            this.dir = gitProperties.getLocalRepositories()+UUID.randomUUID().toString();
 
             String searchPaths = gitProperties.getSearchPaths().replaceFirst("\\{application\\}", application);
 

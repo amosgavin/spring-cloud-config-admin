@@ -32,6 +32,12 @@ public class Project {
     private String name;
 
     /**
+     * 配置文件路径，相对根目录
+     */
+    @Column
+    private String confPath;
+
+    /**
      * 该项目有哪些环境的配置
      */
     @ManyToMany
@@ -43,9 +49,10 @@ public class Project {
     @OneToMany(mappedBy = "project", cascade = CascadeType.REMOVE)
     private List<Label> labels = new ArrayList<>();
 
-    public Project(Long id, String name){
+    public Project(Long id, String name, String confPath){
         this.id = id;
         this.name = name;
+        this.confPath = confPath;
     }
 
 }
